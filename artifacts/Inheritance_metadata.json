@@ -11,6 +11,13 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "addFunds",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address payable",
@@ -29,15 +36,19 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "addtips",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "distrubiteInheritor",
+				"inputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "inheritorAddresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "distributeInheritance",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -45,7 +56,64 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inheritors",
+				"outputs": [
+					{
 						"internalType": "address payable",
+						"name": "inheritorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isAlive",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "keepAlive",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastAlive",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "inheritorAddress",
 						"type": "address"
 					}
@@ -57,7 +125,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "viewInheritor",
+				"name": "viewInheritors",
 				"outputs": [
 					{
 						"components": [
@@ -72,7 +140,7 @@
 								"type": "string"
 							}
 						],
-						"internalType": "struct inheritance.Inheritor[]",
+						"internalType": "struct Inheritance.Inheritor[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -82,7 +150,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "viewtips",
+				"name": "viewPoolBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -107,7 +175,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"inheritance.sol": "inheritance"
+			"inheritance.sol": "Inheritance"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -122,11 +190,11 @@
 	},
 	"sources": {
 		"inheritance.sol": {
-			"keccak256": "0xbc9d4131057cd32a8572978dd79d85d6b0bf6664fe5dac81c44f8aeeca2d2a53",
+			"keccak256": "0x5f53497d849ce26fff0b6043ed14470c370335c6a37d57aabba501510a7907b8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://29c2b6a9467507321860edb88a7f9cbb76c7a32027b64879cd1143c0ae728b43",
-				"dweb:/ipfs/QmRUkVAKAo9Ft4XuYpGX2gKqgUqj13evooYheVCUTNoub2"
+				"bzz-raw://e0c2e70f7ec405960035dc6eaf4acef1e49c3f832456150041bb2c0cdb923690",
+				"dweb:/ipfs/QmPTNCqkrVC6jJSZMHhVQ1j1SEC7gWBkebLLvqAbo2WMYv"
 			]
 		}
 	},
